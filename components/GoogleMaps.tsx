@@ -114,7 +114,7 @@ export default function GoogleMaps() {
         {
           locationsData.map((item: addressType) => {
             return (
-              <Card className='w-[100%] mb-2'>
+              <Card key={item.lat} className='w-[100%] mb-2'>
                 <CardHeader>
                   <CardTitle>{item.name}</CardTitle>
                 </CardHeader>
