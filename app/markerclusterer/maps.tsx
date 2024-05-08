@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
-import { LocationType, AddressType } from './type/locationTypes';
+import { LocationType, AddressType } from '../../components/type/locationTypes';
 
 type MapProps = {
   location: LocationType;

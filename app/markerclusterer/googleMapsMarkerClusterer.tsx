@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from "react";
-import locationsData from "./data/locations.json";
-import Maps from "./Maps";
-import { LocationType, AddressType } from "./type/locationTypes";
+import React, { useState, useEffect } from "react";
+import locationsData from "../../components/data/locations.json";
+import Maps from "./maps";
+import { LocationType, AddressType } from "../../components/type/locationTypes";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function GoogleMaps() {
@@ -29,7 +29,7 @@ export default function GoogleMaps() {
   return (
     <div className="w-[100%] h-[100%] flex justify-between p-4">
       <Maps location={location!} locationsData={locationsData} />
-      <div className="flex flex-col w-[25%] min-w-[200px]  pl-4 overflow-auto">
+      <div className="flex flex-col w-[25%] min-w-[200px] pl-4 overflow-auto">
         {locationsData.map((item: AddressType) => {
           return (
             <Card key={item.lat} className="w-[100%] mb-2">
