@@ -10,11 +10,6 @@ export default function Header() {
         <Image width={24} height={24} src='/google_Maps_icon.png' alt='Google Maps Icon' />
       </Link>
       <div>
-        <Link href="/autoComplete">
-          <Button variant="outline" className="mr-2">
-            AutoComplete
-          </Button>
-        </Link>
         <Link href="/markerclusterer">
           <Button variant="outline" className="mr-2">
             標記叢集
