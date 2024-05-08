@@ -11,7 +11,6 @@ type MapProps = {
 }
 
 export default function Maps({ location, locationsData }: MapProps) {
-  const [ isLoading, setIsLoading ] = useState<boolean>(true);
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -50,7 +49,7 @@ export default function Maps({ location, locationsData }: MapProps) {
 
       // Put up a markers
       const markers = locationsData.map((item: AddressType) => {
-        const marker = new google.maps.Marker({
+        const marker = new Marker({
           position: {
             lat: item.lat,
             lng: item.lng

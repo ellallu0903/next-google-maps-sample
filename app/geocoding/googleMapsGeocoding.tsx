@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
 import Maps from './maps';
 
 export default function GoogleMapsMarker() {
@@ -12,13 +12,14 @@ export default function GoogleMapsMarker() {
   };
 
   return (
-    <div className='p-4'>
+    <div className='p-4 h-full flex flex-col'>
       <Input
         type="text"
+        className='mb-4'
         placeholder="請輸入地址"
         onChange={handleAddress}
       />
-      <Maps />
+      <Maps address={address} />
     </div>
   )
 }
