@@ -61,6 +61,7 @@ export default function GoogleMapsAutoComplete() {
       const googleMap = new google.maps.Map(mapRef.current as HTMLDivElement, mapOptions);
       // Setup autocomplete
       const googleAutoComplete = new google.maps.places.Autocomplete(autocompleteRef.current as HTMLInputElement,{
+        types: [ 'address' ],
         fields: ['formatted_address', 'geometry', 'name'],
         componentRestrictions: {
           country: ['tw']
@@ -122,7 +123,7 @@ export default function GoogleMapsAutoComplete() {
       />
       { isLoaded
         ? <div className='h-[100%] w-[100%] flex-grow' ref={mapRef}></div>
-        : <div>Loading...</div>
+        : <div className='h-[100%] w-[100%] flex-grow flex items-center justify-center'>Loading...</div>
       }
     </div>
   )
