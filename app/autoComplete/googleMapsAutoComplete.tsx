@@ -75,6 +75,28 @@ export default function GoogleMapsAutoComplete() {
   }, [ isLoaded, location ]);
 
   useEffect(() => {
+    const setMarker = (location: google.maps.LatLng, name: string, place: string) => {
+      if(!map) return;
+  
+      map.setCenter(location);
+      const marker = new google.maps.marker.AdvancedMarkerElement({
+        map: map,
+        position: location,
+        title: 'name'
+      })
+  
+      const infoCard = new google.maps.InfoWindow({
+        position: location,
+        content: mapInfoCardContent(name, place),
+        maxWidth: 200
+      })
+  
+      infoCard.open({
+        map: map,
+        anchor: marker
+      })
+    };
+
     if(autoComplete) {
       autoComplete.addListener('place_changed', () => {
         const place = autoComplete.getPlace();
@@ -88,29 +110,7 @@ export default function GoogleMapsAutoComplete() {
         }
       })
     }
-  }, [ autoComplete ]);
-
-  const setMarker = (location: google.maps.LatLng, name: string, place: string) => {
-    if(!map) return;
-
-    map.setCenter(location);
-    const marker = new google.maps.marker.AdvancedMarkerElement({
-      map: map,
-      position: location,
-      title: 'name'
-    })
-
-    const infoCard = new google.maps.InfoWindow({
-      position: location,
-      content: mapInfoCardContent(name, place),
-      maxWidth: 200
-    })
-
-    infoCard.open({
-      map: map,
-      anchor: marker
-    })
-  };
+  }, [ autoComplete, map ]);
 
   return (
     <div className='p-4 h-full flex flex-col'>
