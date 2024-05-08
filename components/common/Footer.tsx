@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <footer className="py-4 px-6 bg-red-700	text-center flex items-center justify-between">
       <Link href='/'>
-        <Image width={24} height={24} src='/google_Maps_icon.png' alt='Google Maps Icon' />
+        <Image width={24} height={24} src='/google_maps_icon.png' alt='Google Maps Icon' />
       </Link>
       <div>
         <Link href="/autoComplete">
