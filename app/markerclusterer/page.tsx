@@ -1,4 +1,4 @@
-import GoogleMapsMarkerClusterer from '@/app/markerclusterer/googleMapsMarkerClusterer';
+import GoogleMapsMarkerClusterer from "@/app/markerclusterer/googleMapsMarkerClusterer";
 
 export default function Markers() {
   return (

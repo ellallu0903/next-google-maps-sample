@@ -1,11 +1,11 @@
 import React from "react";
 import GoogleMapsMarker from "./googleMapsGeocoding";
-GoogleMapsMarker
+GoogleMapsMarker;
 
 export default function page() {
   return (
     <>
       <GoogleMapsMarker />
     </>
-  )
+  );
 }

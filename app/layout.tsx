@@ -19,9 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col h-[100vh]">
-          <div className="h-[calc(100%-72px)]">
-            {children}
-          </div>
+          <div className="h-[calc(100%-72px)]">{children}</div>
           <Footer />
         </div>
       </body>

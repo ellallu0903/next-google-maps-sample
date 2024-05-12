@@ -7,7 +7,7 @@ import { LocationType, AddressType } from "../../components/type/locationTypes";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function GoogleMaps() {
-  const [ location, setLocation ] = useState<LocationType>();
+  const [location, setLocation] = useState<LocationType>();
 
   useEffect(() => {
     // Get user's location
