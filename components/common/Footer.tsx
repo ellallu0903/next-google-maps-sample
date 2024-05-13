@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <footer className="sm:py-4 py-2 sm:px-6 px-2 bg-red-700	text-center flex items-center justify-between">
+    <footer className="py-4 sm:px-6 px-2 bg-red-700	text-center flex items-center justify-between">
       <Link href="/">
         <Image
           width={24}
