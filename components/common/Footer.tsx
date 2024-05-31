@@ -25,6 +25,11 @@ export default function Header() {
             標記叢集
           </Button>
         </Link>
+        <Link href="/hoverMarker">
+          <Button variant="outline" className="mr-2">
+            Hover
+          </Button>
+        </Link>
         <Link href="/geocoding">
           <Button variant="secondary">地理編碼</Button>
         </Link>
