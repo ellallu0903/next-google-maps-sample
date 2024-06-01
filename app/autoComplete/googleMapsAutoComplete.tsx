@@ -21,7 +21,6 @@ export default function GoogleMapsAutoComplete() {
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const [autoComplete, setAutoComplete] =
     useState<google.maps.places.Autocomplete | null>(null);
-  const [selectPlace, setSelectPlace] = useState<string | null>(null);
 
   const mapRef = useRef<HTMLDivElement>(null);
   const autocompleteRef = useRef<HTMLInputElement>(null);
@@ -111,8 +110,6 @@ export default function GoogleMapsAutoComplete() {
       autoComplete.addListener("place_changed", () => {
         const place = autoComplete.getPlace();
         const position = place.geometry?.location;
-        console.log("place", place);
-        setSelectPlace(place.formatted_address as string);
 
         if (position) {
           // Place a marker
