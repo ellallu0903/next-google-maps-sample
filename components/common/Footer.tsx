@@ -14,24 +14,26 @@ export default function Header() {
           alt="Google Maps Icon"
         />
       </Link>
-      <div>
+      <div className="space-x-1">
         <Link href="/autoComplete">
-          <Button variant="outline" className="mr-2">
+          <Button variant="outline" className="p-1">
             AutoComplete
           </Button>
         </Link>
         <Link href="/markerclusterer">
-          <Button variant="outline" className="mr-2">
+          <Button variant="outline" className="p-1">
             標記叢集
           </Button>
         </Link>
         <Link href="/hoverMarker">
-          <Button variant="outline" className="mr-2">
+          <Button variant="outline" className="p-1">
             Hover
           </Button>
         </Link>
         <Link href="/geocoding">
-          <Button variant="secondary">地理編碼</Button>
+          <Button variant="outline" className="p-1">
+            地理編碼
+          </Button>
         </Link>
       </div>
     </footer>
